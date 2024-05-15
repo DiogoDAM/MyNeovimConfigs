@@ -14,6 +14,10 @@ return {
 					'lua_ls',
 					'clangd',
 					'lemminx',
+					'haxe_language_server',
+					'cssls',
+					'html',
+					'tsserver',
 				}
 			})
 		end
@@ -24,19 +28,35 @@ return {
 		config = function()
 			local capabilities = require('cmp_nvim_lsp').default_capabilities()
 			local lspconfig = require("lspconfig")
-			local omnisharp_bin = 'C:/Users/diogo/omnisharp/run'
-			lspconfig.omnisharp.setup({capabilities = capabilities,              
+			lspconfig.omnisharp.setup({capabilities = capabilities,
                 cmd = { "dotnet", vim.fn.stdpath "data" .. "/mason/packages/omnisharp/libexec/OmniSharp.dll" },
                 enable_import_completion = true,
                 organize_imports_on_format = true,
-                enable_roslyn_analyzers = true,
+--                enable_roslyn_analyzers = true,
                 root_dir = function ()
                     return vim.loop.cwd() -- current working directory
                 end,
             }  )
-			lspconfig.lua_ls.setup({capabilities = capabilities})
-			lspconfig.clangd.setup({capabilities = capabilities})
-			lspconfig.lemminx.setup({capabilities = capabilities})
+
+			lspconfig.lua_ls.setup({capabilities = capabilities,})
+			lspconfig.cssls.setup({capabilities = capabilities, })
+			lspconfig.html.setup({capabilities = capabilities, })
+			lspconfig.tsserver.setup({capabilities = capabilities, })
+
+			lspconfig.clangd.setup({capabilities = capabilities,
+                enable_import_completion = true,
+                organize_imports_on_format = true,
+				root_dir = function()
+					return vim.loop.cwd()
+				end,
+			})
+			lspconfig.lemminx.setup({capabilities = capabilities,})
+			lspconfig.haxe_language_server.setup({capabilities = capabilities,
+				cmd = { 'node', vim.fn.stdpath 'data' .. 'mason/packages/haxe-language-server/bin/server.js' },
+				root_dir = function()
+					return vim.loop.cwd()
+				end,
+		})
 
 			vim.keymap.set('n', "K", vim.lsp.buf.hover, {})
 			vim.keymap.set('n', "gd", vim.lsp.buf.definition, {})
