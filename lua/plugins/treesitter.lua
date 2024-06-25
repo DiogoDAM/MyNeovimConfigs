@@ -9,6 +9,7 @@ return {
 				'c',
 				'cpp',
 				'c_sharp',
+				'rust',
 				'json',
 				'xml'
 			}

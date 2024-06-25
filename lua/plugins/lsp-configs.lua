@@ -11,13 +11,10 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					'omnisharp',
+					'haxe_language_server',
 					'lua_ls',
 					'clangd',
 					'lemminx',
-					'haxe_language_server',
-					'cssls',
-					'html',
-					'tsserver',
 				}
 			})
 		end
@@ -37,26 +34,14 @@ return {
                     return vim.loop.cwd() -- current working directory
                 end,
             }  )
+			lspconfig.haxe_language_server.setup({ 
+				cmd = {"node", "/home/.../Dev/haxe/haxe-language-server/bin/server.js"},
+				filetypes = {'hx'},
+				capabilities = capabilities,
+			})
 
 			lspconfig.lua_ls.setup({capabilities = capabilities,})
-			lspconfig.cssls.setup({capabilities = capabilities, })
-			lspconfig.html.setup({capabilities = capabilities, })
-			lspconfig.tsserver.setup({capabilities = capabilities, })
-
-			lspconfig.clangd.setup({capabilities = capabilities,
-                enable_import_completion = true,
-                organize_imports_on_format = true,
-				root_dir = function()
-					return vim.loop.cwd()
-				end,
-			})
 			lspconfig.lemminx.setup({capabilities = capabilities,})
-			lspconfig.haxe_language_server.setup({capabilities = capabilities,
-				cmd = { 'node', vim.fn.stdpath 'data' .. 'mason/packages/haxe-language-server/bin/server.js' },
-				root_dir = function()
-					return vim.loop.cwd()
-				end,
-		})
 
 			vim.keymap.set('n', "K", vim.lsp.buf.hover, {})
 			vim.keymap.set('n', "gd", vim.lsp.buf.definition, {})
