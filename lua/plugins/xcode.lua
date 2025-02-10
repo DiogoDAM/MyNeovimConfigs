@@ -1,7 +1,8 @@
 return {
-	"olimorris/onedarkpro.nvim",
-	name = 'onedark',
+	"lunacookies/vim-colors-xcode",
+	name = "xcode",
 	priority = 1000,
 	config = function()
 	end,
 }
+

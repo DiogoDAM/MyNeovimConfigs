@@ -6,12 +6,13 @@ return {
 		config.setup({
 			ensure_installed = {
 				'lua',
-				'c',
-				'cpp',
 				'c_sharp',
-				'rust',
 				'json',
-				'xml'
+				'xml',
+				'css',
+				'html',
+				'php',
+				'javascript',
 			}
 		})
 	end
