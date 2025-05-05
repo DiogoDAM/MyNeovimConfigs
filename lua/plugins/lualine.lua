@@ -19,10 +19,10 @@ return {
 		winbar = {
 			lualine_a = {'branch'},
 			lualine_b = {{'filetype', icons_only = true, icons = {align = 'left'}, separator = {left = '<', right = '|'}}, {'filename', file_status = true}},
-			lualine_c = {},
+			lualine_c = {'buffers'},
 			lualine_x = {},
 			lualine_y = {},
-			lualine_z = {'buffers'},
+			lualine_z = {},
 		}
 	})
     end

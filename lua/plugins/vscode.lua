@@ -1,7 +1,7 @@
 return {
-	"marko-cerovac/material.nvim",
+	"Mofiqul/vscode.nvim",
+	name = "vscode",
 	priority = 1000,
-	name = "material",
 	config = function()
 	end,
 }

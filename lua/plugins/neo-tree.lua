@@ -26,12 +26,17 @@ return {
 				color = "#DA7035",
 				name = "Rust",
 			},
+			["xml"] = {
+				icon = "</>",
+				color = "#109BCD",
+				name = "Xml",
+			}
 		}
 	  }}, -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
       },
 
 	config = function()
-		vim.keymap.set('n', "<C-n>", ":Neotree filesystem reveal left<CR>")
+		vim.keymap.set('n', "<C-m>", ":Neotree filesystem reveal left<CR>")
 	end
  }

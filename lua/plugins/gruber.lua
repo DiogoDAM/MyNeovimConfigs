@@ -1,6 +1,6 @@
 return {
 	--"blazkowolf/gruber-darker.nvim",
-	enabled = false,
+	enabled = true,
  	'thimc/gruber-darker.nvim',
 	name = "gruber-darker",
 	priority = 1000,
