@@ -1,7 +1,6 @@
-return {
+return{
 	"olimorris/onedarkpro.nvim",
-	name = 'onedark',
+	name = "onedark",
 	priority = 1000,
-	config = function()
-	end,
+	config = function () end
 }

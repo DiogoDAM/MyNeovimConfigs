@@ -37,6 +37,6 @@ return {
       },
 
 	config = function()
-		vim.keymap.set('n', "<C-m>", ":Neotree filesystem reveal left<CR>")
+		vim.keymap.set('n', "<C-m>", ":Neotree filesystem reveal right<CR>")
 	end
  }

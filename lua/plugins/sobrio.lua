@@ -1,6 +1,6 @@
 return {
-	"blazkowolf/gruber-darker.nvim",
-	name = "gruber",
+	"elvessousa/sobrio",
+	name = "sobrio",
 	priority = 1000,
 	config = function() end,
 }
