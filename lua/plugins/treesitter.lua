@@ -7,14 +7,17 @@ return {
 			ensure_installed = {
 				'lua',
 				'c_sharp',
-				'ruby',
+				'php',
 				'json',
 				'xml',
 				'css',
 				'html',
-				'php',
-				"haxe",
 				'javascript',
+				"go",
+				"ini",
+				"c",
+				"cpp",
+				"csv",
 			}
 		})
 	end

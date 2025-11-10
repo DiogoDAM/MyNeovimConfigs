@@ -18,6 +18,7 @@ return {
 					'cssls',
 					'tsserver',
 					'intelephense',
+					'gopls',
 				}
 			})
 		end
@@ -37,23 +38,12 @@ return {
                     return vim.loop.cwd() -- current working directory
                 end,})
 			lspconfig.intelephense.setup({capabilities = capabilities,})
-			-- lspconfig.haxe_ls.setup({capabilities = capabilities,
-			-- 	cmd = {"haxe-language-server"},
-			-- 	filetypes = {"haxe"},
-			-- 	root_dir = require('lspconfig.util').root_pattern("build.hxml", ".git"),
-			-- 	settings = {
-			-- 		haxe = {
-			-- 		  executable = "haxe",
-			-- 		  hxml = "build.hxml"
-			-- 		}
-			-- 	}
-			-- })
-
 			lspconfig.lemminx.setup({capabilities = capabilities,})
 			lspconfig.clangd.setup({capabilities = capabilities})
 			lspconfig.html.setup({capabilities = capabilities})
 			lspconfig.cssls.setup({capabilities = capabilities})
 			lspconfig.tsserver.setup({capabilities = capabilities})
+			lspconfig.gopls.setup({capabilities = capabilities})
 
 			vim.keymap.set('n', "K", vim.lsp.buf.hover, {})
 			vim.keymap.set('n', "gd", vim.lsp.buf.definition, {})
