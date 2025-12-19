@@ -13,7 +13,6 @@ return {
 				'css',
 				'html',
 				'javascript',
-				"go",
 				"ini",
 				"c",
 				"cpp",
