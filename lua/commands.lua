@@ -21,3 +21,9 @@ vim.api.nvim_create_user_command("DD", function()
 	vim.cmd("!dotnet run")
 end,
 { nargs = 0 })
+
+vim.api.nvim_create_user_command("GitM", function(opts)
+	vim.cmd(("!git add . && git commit -m %s"):format(opts.args))
+end,
+{nargs = 1 })
+

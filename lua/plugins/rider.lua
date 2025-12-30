@@ -3,6 +3,6 @@ return {
 	name = "rider",
 	priority = 1000,
 	config = function()
-		vim.cmd("colorscheme rider")
+		-- vim.cmd("colorscheme rider")
 	end,
 }
