@@ -22,8 +22,7 @@ vim.api.nvim_create_user_command("DD", function()
 end,
 { nargs = 0 })
 
-vim.api.nvim_create_user_command("GitM", function(opts)
+vim.api.nvim_create_user_command("Gitm", function(opts)
 	vim.cmd(("!git add . && git commit -m %s"):format(opts.args))
 end,
 {nargs = 1 })
-
