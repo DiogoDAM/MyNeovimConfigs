@@ -8,3 +8,5 @@ vim.cmd(" set encoding=utf-8 ")
 vim.cmd(" set ignorecase ")
 vim.cmd(" set textwidth=80 ")
 
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })

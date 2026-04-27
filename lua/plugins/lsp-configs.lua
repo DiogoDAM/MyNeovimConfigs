@@ -14,6 +14,7 @@ return {
 					'omnisharp',
 					'lemminx',
 					'clangd',
+					'markdown_oxide',
 				}
 			})
 		end
@@ -33,7 +34,16 @@ return {
                     return vim.loop.cwd() -- current working directory
                 end,})
 			lspconfig.lemminx.setup({capabilities = capabilities,})
-			lspconfig.clangd.setup({capabilities = capabilities})
+			lspconfig.rubocop.setup({capabilities = capabilities,})
+			lspconfig.markdown_oxide.setup({capabilities = capabilities,})
+			lspconfig.clangd.setup({capabilities = capabilities,
+		            cmd = {
+						"clangd",
+						"--log=verbose",
+						"--compile-commands-dir=./build",
+						"--query-driver=/home/xenlauz/.conan/data/euler_toolchain_arm_rtos/1.1.0/sick/release/package/cb054d0b3e1ca595dc66bc2339d40f1f8f04ab31/gcc-arm-none-eabi-9-2019-q4-major/bin/arm-none-eabi-g++"
+            		},
+				})
 
 			vim.keymap.set('n', "K", vim.lsp.buf.hover, {})
 			vim.keymap.set('n', "gd", vim.lsp.buf.definition, {})
