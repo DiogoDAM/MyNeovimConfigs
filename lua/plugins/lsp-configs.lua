@@ -15,6 +15,7 @@ return {
 					'lemminx',
 					'clangd',
 					'markdown_oxide',
+					'gopls',
 				}
 			})
 		end
@@ -34,7 +35,7 @@ return {
                     return vim.loop.cwd() -- current working directory
                 end,})
 			lspconfig.lemminx.setup({capabilities = capabilities,})
-			lspconfig.rubocop.setup({capabilities = capabilities,})
+			lspconfig.gopls.setup({capabilities = capabilities,})
 			lspconfig.markdown_oxide.setup({capabilities = capabilities,})
 			lspconfig.clangd.setup({capabilities = capabilities,
 		            cmd = {
