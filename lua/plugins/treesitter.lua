@@ -17,7 +17,6 @@ return {
 				"make",
 				"ninja",
 				"csv",
-				"go",
 			}
 		})
 	end
