@@ -15,3 +15,5 @@ vim.opt.rtp:prepend(lazypath)
 require("options")
 require("commands")
 require("lazy").setup("plugins")
+
+vim.cmd("colorscheme gruvbox-material")

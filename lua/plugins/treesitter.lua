@@ -17,6 +17,7 @@ return {
 				"make",
 				"ninja",
 				"csv",
+				"ruby",
 			}
 		})
 	end

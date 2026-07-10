@@ -22,7 +22,14 @@ vim.api.nvim_create_user_command("DD", function()
 end,
 { nargs = 0 })
 
+vim.api.nvim_create_user_command("VV", function()
+	vim.cmd("!love .")
+end,
+{ nargs = 0 })
+
 vim.api.nvim_create_user_command("Gitm", function(opts)
 	vim.cmd(("!git add . && git commit -m %s"):format(opts.args))
 end,
 {nargs = 1 })
+
+vim.keymap.set('n', "<C-d>", ":!dotnet run<CR>")

@@ -1,0 +1,7 @@
+return {
+	"sainnhe/gruvbox-material",
+	priority = 1000,
+	name = "gruvbox-material",
+	config = function()
+	end,
+}
