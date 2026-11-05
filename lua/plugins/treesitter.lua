@@ -18,7 +18,8 @@ return {
 				"ninja",
 				"csv",
 				"ruby",
-			}
+			},
+			highlight = {enable = true},
 		})
 	end
 }

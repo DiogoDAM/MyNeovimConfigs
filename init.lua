@@ -16,4 +16,7 @@ require("options")
 require("commands")
 require("lazy").setup("plugins")
 
-vim.cmd("colorscheme gruvbox-material")
+-- vim.cmd("colorscheme hybrid_reverse")
+-- vim.cmd("colorscheme gruvbox")
+
+vim.cmd.colorscheme("alduin")

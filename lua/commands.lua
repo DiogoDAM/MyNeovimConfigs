@@ -22,7 +22,7 @@ vim.api.nvim_create_user_command("DD", function()
 end,
 { nargs = 0 })
 
-vim.api.nvim_create_user_command("VV", function()
+vim.api.nvim_create_user_command("LL", function()
 	vim.cmd("!love .")
 end,
 { nargs = 0 })
